@@ -52,7 +52,7 @@ $$\sum_{n=0}^{N-1} x_{j,n} = 1 \quad \forall j \in \{0, \dots, J-1\} \quad [1]$$
 ## 3. Comparative Mathematical Modeling
 
 ### 3.1 Approach A: Soft-QUBO / Penalty-Based Formulation
-In the penalty-based formulation (implemented in `QUBO_V2.html`), the hard equality constraint is relaxed and embedded directly into the objective function using a quadratic penalty term with penalty coefficient $P$ [2]:
+In the penalty-based formulation (implemented in `Soft.ipynb`), the hard equality constraint is relaxed and embedded directly into the objective function using a quadratic penalty term with penalty coefficient $P$ [2]:
 
 $$H_{\text{QUBO}} = \sum_{n=0}^{N-1} \left( \sum_{j=0}^{J-1} w_j x_{j,n} - L_{\text{target}} \right)^2 + P \sum_{j=0}^{J-1} \left( \sum_{n=0}^{N-1} x_{j,n} - 1 \right)^2 \quad [2]$$
 
@@ -69,7 +69,7 @@ $$H_{\text{QUBO}} \Longrightarrow H_{\text{Ising}} = \text{offset} + \sum_{i} h_
 ---
 
 ### 3.2 Approach B: Hard-Constraint Subspace Optimization (Team ZETA's Design)
-In Team ZETA's architecture (`XY_V1.html`), we discard all penalty terms ($P = 0$) [1]. We analytically derive the Ising coefficients directly from the raw load-balancing objective, ensuring the quantum state is initialized and strictly maintained within the feasible one-hot subspace throughout the QAOA execution [1].
+In Team ZETA's architecture (`XY.ipynb`), we discard all penalty terms ($P = 0$) [1]. We analytically derive the Ising coefficients directly from the raw load-balancing objective, ensuring the quantum state is initialized and strictly maintained within the feasible one-hot subspace throughout the QAOA execution [1].
 
 #### Cost Hamiltonian Analytical Derivation:
 Expanding the square of the objective for compute node $n$ [1]:
@@ -221,7 +221,7 @@ By implementing a constraint-preserving $XY$-QAOA, Team ZETA successfully bypass
 ---
 
 ### References
-*   **[1] Team ZETA Codebase:** `XY_V1.html` (XY-Mixer QAOA implementation)
-*   **[2] Team ZETA Codebase:** `QUBO_V2.html` (Soft-QUBO / Penalty-based implementation)
+*   **[1] Team ZETA Codebase:** `XY.ipynb` (XY-Mixer QAOA implementation)
+*   **[2] Team ZETA Codebase:** `Soft.ipynb` (Soft-QUBO / Penalty-based implementation)
 *   **[3] Farhi et al. (2014):** *A Quantum Approximate Optimization Algorithm*, arXiv:1411.4028.
 *   **[4] Kordonowy, S. & Leipold, H. (2026):** *The Lie algebra of XY-mixer topologies and warm starting QAOA for constrained optimization*, npj Quantum Information, 12:61.
