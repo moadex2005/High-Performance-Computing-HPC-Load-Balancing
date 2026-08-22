@@ -1,0 +1,204 @@
+{
+  "config": {
+    "jobs": 4,
+    "nodes": 2,
+    "instances": [
+      0,
+      1
+    ],
+    "qaoa_seeds": [
+      0
+    ],
+    "depths": [
+      1
+    ],
+    "maxiter": 40,
+    "restarts": 1,
+    "methods": [
+      "xy",
+      "soft"
+    ],
+    "optimizer": "COBYLA"
+  },
+  "default_instance_classical": {
+    "exact": {
+      "objective": 2.0,
+      "num_optimal": 12,
+      "num_candidates": 1048576
+    },
+    "greedy": {
+      "objective": 422.0000000000001,
+      "overload": 0.0
+    },
+    "random_best": 13.999999999999957,
+    "random_mean": 7660.3516,
+    "sa": {
+      "objective": 6.000000000000028
+    }
+  },
+  "penalties_note": "per-instance penalty = 1.1 x exact P* from calibrate_penalty",
+  "circuit_resources": {
+    "xy_p1": {
+      "pre": {
+        "depth": 23,
+        "size": 72,
+        "num_qubits": 8,
+        "params": 2,
+        "two_q_gates": 24,
+        "one_q_gates": 48
+      },
+      "post": {
+        "depth": 51,
+        "size": 252,
+        "two_q_gates": 72,
+        "one_q_gates": 180
+      }
+    },
+    "soft_p1": {
+      "pre": {
+        "depth": 21,
+        "size": 72,
+        "num_qubits": 8,
+        "params": 2,
+        "two_q_gates": 32,
+        "one_q_gates": 40
+      },
+      "post": {
+        "depth": 27,
+        "size": 120,
+        "two_q_gates": 32,
+        "one_q_gates": 88
+      }
+    }
+  },
+  "statistics": {
+    "approx_ratio_selected": {
+      "soft|d1": {
+        "mean": 1.0,
+        "median": 1.0,
+        "std": 0.0,
+        "ci95_halfwidth": 0.0,
+        "n": 2
+      },
+      "xy|d1": {
+        "mean": 1.0,
+        "median": 1.0,
+        "std": 0.0,
+        "ci95_halfwidth": 0.0,
+        "n": 2
+      }
+    },
+    "p_feasible": {
+      "soft|d1": {
+        "mean": 0.10036102008772538,
+        "median": 0.10036102008772538,
+        "std": 0.04239358619334321,
+        "ci95_halfwidth": 0.05875451286121359,
+        "n": 2
+      },
+      "xy|d1": {
+        "mean": 0.9999999999999978,
+        "median": 0.9999999999999978,
+        "std": 3.510833468576701e-16,
+        "ci95_halfwidth": 4.865766940364655e-16,
+        "n": 2
+      }
+    },
+    "p_optimal": {
+      "soft|d1": {
+        "mean": 0.0034799569331560197,
+        "median": 0.0034799569331560197,
+        "std": 0.0033139050892196558,
+        "ci95_halfwidth": 0.004592838131159825,
+        "n": 2
+      },
+      "xy|d1": {
+        "mean": 0.07474262025522845,
+        "median": 0.07474262025522845,
+        "std": 0.06890515268832177,
+        "ci95_halfwidth": 0.09549766942022929,
+        "n": 2
+      }
+    },
+    "best_feasible_objective": {
+      "soft|d1": {
+        "mean": 0.07922049498711353,
+        "median": 0.07922049498711353,
+        "std": 0.05933862430070725,
+        "ci95_halfwidth": 0.08223913751344945,
+        "n": 2
+      },
+      "xy|d1": {
+        "mean": 0.07922049498711353,
+        "median": 0.07922049498711353,
+        "std": 0.05933862430070725,
+        "ci95_halfwidth": 0.08223913751344945,
+        "n": 2
+      }
+    },
+    "mean_feasible_objective": {
+      "soft|d1": {
+        "mean": 407.0685887617455,
+        "median": 407.0685887617455,
+        "std": 412.4834040369973,
+        "ci95_halfwidth": 571.6728317580837,
+        "n": 2
+      },
+      "xy|d1": {
+        "mean": 376.79459273284044,
+        "median": 376.79459273284044,
+        "std": 348.2446317905378,
+        "ci95_halfwidth": 482.64243567576716,
+        "n": 2
+      }
+    },
+    "expectation_value": {
+      "soft|d1": {
+        "mean": 504.0136596283024,
+        "median": 504.0136596283024,
+        "std": 405.90527688931587,
+        "ci95_halfwidth": 562.5560126633633,
+        "n": 2
+      },
+      "xy|d1": {
+        "mean": 376.7945927328397,
+        "median": 376.7945927328397,
+        "std": 348.2446317905372,
+        "ci95_halfwidth": 482.64243567576625,
+        "n": 2
+      }
+    },
+    "num_evaluations": {
+      "soft|d1": {
+        "mean": 26.0,
+        "median": 26.0,
+        "std": 0.0,
+        "ci95_halfwidth": 0.0,
+        "n": 2
+      },
+      "xy|d1": {
+        "mean": 28.0,
+        "median": 28.0,
+        "std": 1.4142135623730951,
+        "ci95_halfwidth": 1.9599999999999997,
+        "n": 2
+      }
+    },
+    "runtime_qaoa_s": {
+      "soft|d1": {
+        "mean": 0.17853745000320487,
+        "median": 0.17853745000320487,
+        "std": 0.002692026227873349,
+        "ci95_halfwidth": 0.003730958001688122,
+        "n": 2
+      },
+      "xy|d1": {
+        "mean": 0.26010875000429223,
+        "median": 0.26010875000429223,
+        "std": 0.10573997023935541,
+        "ci95_halfwidth": 0.14654812199747538,
+        "n": 2
+      }
+    }
+  }
+}

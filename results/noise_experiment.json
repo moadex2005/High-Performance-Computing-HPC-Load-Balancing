@@ -1,0 +1,39 @@
+{
+  "config": {
+    "jobs": 4,
+    "nodes": 2,
+    "instance_seed": 3,
+    "depth": 1,
+    "depolarizing_1q": 0.001,
+    "depolarizing_2q": 0.01,
+    "maxiter": 60,
+    "optimizer": "COBYLA"
+  },
+  "f_opt": 18.0,
+  "results": {
+    "xy_noiseless": {
+      "p_feasible": 1.0,
+      "p_optimal": 0.10622093418836079,
+      "expectation_value": 891.9586458134116,
+      "mean_feasible_objective": 891.9586458134116
+    },
+    "xy_noisy": {
+      "p_feasible": 0.6208005297415423,
+      "p_optimal": 0.042961751079477514,
+      "expectation_value": 749.0169960916412,
+      "mean_feasible_objective": 602.4965751751354
+    },
+    "soft_noiseless": {
+      "p_feasible": 0.1030409807964746,
+      "p_optimal": 0.005915738744699518,
+      "expectation_value": 797.3193856300509,
+      "mean_feasible_objective": 584.9774179647592
+    },
+    "soft_noisy": {
+      "p_feasible": 0.104831593319794,
+      "p_optimal": 0.04205710688586094,
+      "expectation_value": 674.418919987847,
+      "mean_feasible_objective": 547.7853095051018
+    }
+  }
+}

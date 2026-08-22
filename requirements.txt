@@ -1,0 +1,14 @@
+# Core
+qiskit>=1.0,<3
+qiskit-aer>=0.14,<1
+numpy>=1.24,<3
+scipy>=1.10
+matplotlib>=3.7
+pandas>=2.0
+
+# Dev / tests
+pytest>=7.0
+
+# Optional: library cross-check used by one test
+qiskit-algorithms>=0.3
+qiskit-optimization>=0.6
